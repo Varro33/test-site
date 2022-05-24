@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8" />
+        <title> La margherita </title>
+        <link rel="stylesheet" href="pizza.css">
+    
+    
+    </head>
+    <body style="background-color:lightgray;">
+        <h1> <center> La margherita </center> </h1>
+        <center> <img src = /net/cremi/mamsellem/Bureau/pizza.jpg height = "300" width = "600"/> </center>
+        
+        <h2> Définition </h2>
+            <p>
+            La pizza Margherita est le nom d une spécialité culinaire traditionnelle de la ville de Naples en Italie. Très populaire, cette pizza napoletana est garnie de tomates, de mozzarella, de basilic frais, de sel et d'huile d'olive. Cette pizza est aux couleurs du drapeau italien.
+            </p>
+            
+        <h2> Ingrédients </h2>
+            <p>
+            Olive, huile d olive, sel, 5 feuilles de basilic, 100g de sauce tomate, 150g de pâte à pain, 1 mozarella
+            </p>
+            
+        <h2> Recette </h2>
+            
+            Pour commencer, les tomates doivent être pelées et découpées en petits dés.
+            
+            Assaisonnez la sauce tomate avec une pincée de sel, un peu de poivre et ½ cuillère à soupe d’huile d’olive vierge extra.            
+
+            Préparez des bouquets garnis : thym, laurier ou même romarin et incorporez dans la sauce.
+            
+            Laissez mijoter et remuez souvent pour bien mélanger.
+                  
+            Coupez les boules de mozzarella en dés (ou en tranches fines si vous préférez).
+
+            Une pizza est encore meilleure si vous avez fait la pâte vous-même.
+
+            Pour ce faire, mettez dans un grand saladier la farine et salez votre préparation à souhait.
+
+            Ajoutez la levure boulangère, le sucre et l’huile d’olive mélangés avec un peu d’eau tiède.
+            
+            Pétrissez la pâte jusqu’à ce qu’elle soit homogène. Nous vous conseillons de pétrir à la main avec des mouvements bien fermes.
+                        
+            Recouvrez la pâte d’un torchon humide et laissez reposer en attendant qu’elle double de volume.
+                        
+            Le temps de pause est d’environ 30 minutes.
+        <h2> Prix </h2>
+            <p> 8 euros </p>
+            
+        <SCRIPT LANGUAGE="javascript">
+        function afficher(form2) {
+              
+
+        var test = document.form2.input1.value;
+
+        if (test == "definition") {
+            (document.form2.output1.value = "Pizza garnie de mozzarella et trois autres fromages, variant selon les spécialités locales (bleu, brie, …).");           
+            }
+        else if (test == "ingrédients") {
+            (document.form2.output1.value = "1 pâte à pizza 200 g de coulis de tomates spécial pizza 65 g de cheddar 40 g de comté 50 g de bleu (ou de gorgonzola) 1 boule de mozzarella   basilic");
+            }
+        else if (test == "recette") {
+            (document.form2.output1.value = "Étalez la pâte à pizza dans un moule à pizza. 2 Versez le coulis de tomate et répartissez-le sur la pâte à l’aide du dos d’une cuillère à soupe, en laissant environ 1 cm sans garniture tout autour de la pizza. 3 Coupez les quatre fromages en dés et répartissez-les sur la pizza. 4 Saupoudrez de basilic. Pour finir Enfournez pendant environ 20 minutes à 170°C (thermostat 5/6).");
+            }
+        else if (test =="prix") {
+            (document.form2.output1.value = "10 euros");
+            }
+            
+            else  {
+
+                (document.form2.output1.value = "HCC");
+        }
+                    }
+        </SCRIPT>
+        <BODY>
+        
+        <FORM NAME="form2">
+        
+        <INPUT TYPE="text" NAME="input1" VALUE=""> Zone de texte d entrée 
+        
+        
+        <INPUT TYPE="button" NAME="bouton1" VALUE="Afficher" onClick="afficher(form)">
+        <INPUT TYPE="text" NAME="output1" VALUE=""> Zone de texte de sortie
+        </BODY>
+        </FORM>
+        <br>
+        
+         <FORM NAME="formu" ACTION="https://mathieu-amsellem.emi.u-bordeaux.fr/formu_php.php">
+        
+        <INPUT TYPE="text" NAME="formu" VALUE=""> Zone de texte d entrée        
+        <INPUT TYPE="submit" NAME="bouton1" VALUE="Afficher avec php" s>
+        
+        </BODY>
+        </FORM> 
+            
+        <h1> <center> La 4 fromages </center> </h1>
+        <center> <img src = /net/cremi/mamsellem/Bureau/pizza-4-fromages.jpg height = "300" width = "600" /> </center>
+        
+        <h2> Définition </h2>
+            <p> Pizza garnie de mozzarella et trois autres fromages, variant selon les spécialités locales (bleu, brie, …).            </p>
+            
+        <h2> Ingrédients </h2>
+            <p>
+
+            1 pâte à pizza
+            200 g de coulis de tomates spécial pizza
+            65 g de cheddar
+            40 g de comté
+            50 g de bleu (ou de gorgonzola)
+            1 boule de mozzarella
+            basilic
+            </p>
+            
+        <h2> Recette </h2>
+            <p>
+            Étalez la pâte à pizza dans un moule à pizza.
+            2 Versez le coulis de tomate et répartissez-le sur la pâte à l’aide du dos d’une cuillère à soupe, en laissant environ 1 cm sans garniture tout autour de la pizza.
+            3 Coupez les quatre fromages en dés et répartissez-les sur la pizza.
+            4 Saupoudrez de basilic.
+            Pour finir
+            Enfournez pendant environ 20 minutes à 170°C (thermostat 5/6).
+            </p>
+        <h2> Prix </h2>
+            <p> 10 euros </p>
+            
+        
+        <SCRIPT LANGUAGE="javascript">
+        class Pizza {
+            constructor(definition, recette, ingredient, prix){
+
+                this.definition = definition;
+                this.recette = recette;
+                this.ingredients = ingredient;
+                this.prix = prix;
+                }
+        }
+
+        function enregistrer() {
+
+            const pizza_fromages = new Pizza(document.form3.input_def.value, document.form3.input_rec.value, document.form3.input_ing.value, document.form3.input_prix.value);
+            localStorage.setItem(Pizza, JSON.stringify(pizza_fromages));
+        }
+
+        
+        function afficher_valeurs() {
+            document.form3.output3.value = localStorage.getItem(Pizza);
+
+            }
+        
+        </SCRIPT>
+        
+        <BODY>
+        
+        <FORM NAME="form3">
+        
+        Définition :<INPUT TYPE="text" NAME="input_def" VALUE="">
+        Recette :<INPUT TYPE="text" NAME="input_rec" VALUE=""> 
+        Ingrédients :<INPUT TYPE="text" NAME="input_ing" VALUE=""> 
+        Prix :<INPUT TYPE="text" NAME="input_prix" VALUE="">  
+                         
+
+        <INPUT TYPE="button" NAME="bouton3" VALUE="Enregistrer les valeurs" onClick="enregistrer()">
+        <INPUT TYPE="button" NAME="bouton4" VALUE="Afficher les valeurs" onClick="afficher_valeurs()">
+        <INPUT TYPE="text" NAME="output3" VALUE=""> 
+        </BODY>
+        </FORM> 
+        
+        
+      
+
+            
+        <h1> <center> La calzone </center> </h1>
+        <center> <img src = /net/cremi/mamsellem/Bureau/calzone.jpg height = "300" width = "600" /> </center>
+        
+        <h2> Définition </h2>
+            <p> Plat italien qui correspond à une pizza, généralement à base de tomates et de mozzarella, qui est pliée en deux. La calzone prend alors la forme d un chausson fourré. </p>
+            
+        <h2> Ingrédients </h2>
+            <p>
+
+            
+                Pâte à pizza maison ou non 1
+                Sauce tomate maison (recette classique marinara ) ou non 100 ml
+                Mozzarella râpée 60 g
+                Parmesanb15 g
+                Jambon cru ou non 60 g
+                Sel
+                Poivre
+                Huile d olive 
+            </p>
+            
+        <h2> Recette </h2>
+            <p>
+            1
+            Découper en gros morceaux le jambon. Dans un saladier mélanger le parmesan, la mozzarella et le jambon. Puis ajouter la sauce tomate. Saler, poivrer... Séparer la boule de pizza en 2. Abaisser les 2 boules de pizza.
+            2
+            Disposer la moitié de la préparation sur un côté et le restant sur l autre pâte. Refermer pour former une demi-lune. À l aide d une fourchette sceller la pâte sur les bords. Préchauffer le four à 230°C.
+            3
+            À l aide d un pinceau, badigeonner le dessus de chaque calzone d huile d olive. Soyez généreux ! Enfourner les calzones après les avoir disposé sur une plaque recouverte d un papier sulfurisé.
+            Pour finir
+            Laisser cuire entre 10-15 minutes tout dépend du four. Il faut une belle dorure sur le dessus. Attendre bien 5 minutes avant de déguster, parce que c est chaud ! 
+            </p>
+        <h2> Prix </h2>
+            <p> 9 euros </p>
+            
+  </body>
+  
+
+
+
+
+</html>
